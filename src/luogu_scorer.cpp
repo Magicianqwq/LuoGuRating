@@ -2466,6 +2466,18 @@ static LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lPara
 				RECT card = { S(40), S(24), rc.right - S(40), CardHeight() };
 				FillRect(hdc, &card, g_brCard);
 			}
+			// 窗口最下方常驻的免费声明（只画字，不占控件、不改布局）
+			{
+				RECT foot = { S(16), rc.bottom - S(26), rc.right - S(128), rc.bottom - S(4) };
+				if (foot.right > foot.left) {
+					SetBkMode(hdc, TRANSPARENT);
+					SetTextColor(hdc, C_SUB);
+					HFONT of = (HFONT)SelectObject(hdc, g_fSub);
+					DrawTextW(hdc, L"本工具完全免费，由鸣破音弦制作", -1, &foot,
+					          DT_LEFT | DT_BOTTOM | DT_SINGLELINE | DT_NOPREFIX);
+					SelectObject(hdc, of);
+				}
+			}
 			return 1;
 		}
 		case WM_CTLCOLORSTATIC:

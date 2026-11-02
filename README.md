@@ -1,4 +1,6 @@
-# 洛谷计分器 · Luogu Scorer --
+# 洛谷计分器 · Luogu Scorer
+
+> **本工具完全免费，由鸣破音弦制作。** 谢绝任何形式的付费转售；若你是花钱买到的，说明你被骗了。
 
 一个 Windows 桌面小工具：登录（或用公开模式查询）洛谷账号，把「已通过」的题目按难度算成 **B50 Rating**，并能按难度分组浏览、挑题、每日一题。
 
@@ -152,6 +154,21 @@ Rating = （已通过题目里分数最高的 50 道之和） ÷ 50
 ## 免责声明
 
 本项目是非官方的个人学习作品，与洛谷（luogu.com.cn）官方无关；请只查询你本人或已获授权的账号，并遵守网站的服务条款。
+
+### Code signing policy / 代码签名政策
+
+本项目的 Windows 可执行文件通过 [SignPath Foundation](https://signpath.org/) 申请免费的 OSS 代码签名。
+
+- **Committer**：[@Magicianqw](https://github.com/Magicianqw)
+- **Reviewer**：[@Magicianqw](https://github.com/Magicianqw)
+- **Approver**：[@Magicianqw](https://github.com/Magicianqw)
+
+签名范围与承诺：
+
+- 只为本仓库（LuoguRating）公开源码编译出的产物签名，不签名任何第三方代码或来源不明的二进制；
+- 本程序不收集、不上传任何用户数据；账号、成绩与缓存全部保存在程序目录下的 `data\` 文件夹里；
+- 本程序不修改系统配置、不写注册表、不安装服务、不常驻后台；解压即用，删掉文件夹即卸载；
+- 主分支受保护，所有签名请求由上述 Approver 在 GitHub Actions 中人工确认后发起。
 
 ## License
 
